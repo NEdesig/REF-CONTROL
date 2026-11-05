@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111318">
+
+  <meta name="description" content="REF CONTROL — система управления судейским корпусом и Кубком России U16.">
+
+  <title>REF CONTROL — Кубок России U16</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="app-shell">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="sidebar">
+
+      <a class="brand" href="#" data-page="dashboard">
+
+        <span class="brand-mark">RC</span>
+
+        <span>
+          <b>REF CONTROL</b>
+          <small>TOURNAMENT SYSTEM</small>
+        </span>
+
+      </a>
+
+      <div class="side-label">УПРАВЛЕНИЕ</div>
+
+      <nav class="nav">
+
+        <button class="nav-item active" data-page="dashboard">
+          <span>▦</span>
+          Главная
+        </button>
+
+        <button class="nav-item" data-page="selection">
+          <span>♙</span>
+          Судейский корпус
+          <i id="selectionNavCount">0/96</i>
+        </button>
+
+        <button class="nav-item" data-page="calendar">
+          <span>▦</span>
+          Календарь
+        </button>
+
+        <button class="nav-item" data-page="standings">
+          <span>▤</span>
+          Турнирные таблицы
+        </button>
+
+        <button class="nav-item" data-page="playoffs">
+          <span>⌑</span>
+          Второй этап
+        </button>
+
+        <button class="nav-item" data-page="reports">
+          <span>◎</span>
+          Инспектирование
+        </button>
+
+        <button class="nav-item" data-page="rankings">
+          <span>↗</span>
+          Рейтинг арбитров
+        </button>
+
+      </nav>
+
+      <div class="sidebar-bottom">
+
+        <div class="side-label">ТУРНИР</div>
+
+        <div class="tournament-chip">
+
+          <span class="live-dot"></span>
+
+          <span>
+            <b>Кубок России U16</b>
+            <small>Сочи · 2 арены</small>
+          </span>
+
+        </div>
+
+        <button class="nav-item" data-page="settings">
+          <span>⚙</span>
+          Настройки и данные
+        </button>
+
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+      <header class="topbar">
+
+        <button
+          class="mobile-menu"
+          id="mobileMenu"
+          aria-label="Открыть меню"
+        >
+          ☰
+        </button>
+
+        <div>
+
+          <div class="eyebrow">
+            ГЛАВНЫЙ ИНСПЕКТОР
+          </div>
+
+          <div class="top-title" id="pageTitle">
+            Панель управления
+          </div>
+
+        </div>
+
+        <div class="top-actions">
+
+          <span class="top-date" id="todayLabel">
+            СОЧИ · U16
+          </span>
+
+          <span class="avatar">И</span>
+
+        </div>
+
+      </header>
+
+      <!-- PAGE CONTENT -->
+
+      <div class="content" id="appContent"></div>
+
+      <footer>
+
+        REF CONTROL
+        <span>·</span>
+        Локальная версия турнира
+        <span>·</span>
+        Данные сохраняются в этом браузере
+
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- NOTIFICATIONS -->
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+  ></div>
+
+  <!-- MODAL -->
+
+  <div
+    class="modal-backdrop"
+    id="modalBackdrop"
+    hidden
+  >
+
+    <section
+      class="modal"
+      id="modal"
+    ></section>
+
+  </div>
+
+  <!-- DATA -->
+
+  <script src="data.js"></script>
+
+  <!-- APPLICATION -->
+
+  <script src="app.js"></script>
+
+</body>
+</html>
